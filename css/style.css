@@ -1,0 +1,266 @@
+*,::before,::after{ margin: 0; box-sizing: border-box;}
+a{ text-decoration: none;}
+ul{ list-style: none; padding: 0;}
+img{ vertical-align: bottom;}
+button{ cursor: pointer; padding: 0;}
+label{ display: inline-block;}
+iframe{ border: none;}
+:disabled{ cursor: not-allowed;}
+
+@font-face {
+    font-family: proxima;
+    src: url(../fonts/Proxima-Nova-Thin.woff2);
+    font-weight: 100;
+    font-display: swap;
+}
+@font-face {
+    font-family: proxima;
+    src: url(../fonts/proximanova-regular.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: proxima;
+    src: url(../fonts/proximanova-bold.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+
+html{ 
+    font-size: 15px; 
+    --ff: proxima, sans-serif;
+    --red:#ca3c3c;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body{ 
+    font: 14px/1.3 var(--ff);
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -1rem;
+}
+
+[class^="col-"]{ flex: 1 0 auto; padding: 0 1rem;}
+.col-1{ flex-basis:8.33%; max-width: 8.33%;}
+.col-2{ flex-basis:16.66%; max-width: 16.66%;}
+.col-3{ flex-basis:25%; max-width: 25%;}
+.col-4{ flex-basis:33.33%; max-width: 33.33%;}
+.col-5{ flex-basis:41.66%; max-width: 41.66%;}
+.col-6{ flex-basis:50%; max-width: 50%;}
+.col-7{ flex-basis:58.33%; max-width: 58.33%;}
+.col-8{ flex-basis:66.66%; max-width: 66.66%;}
+.col-9{ flex-basis:75%; max-width: 75%;}
+.col-10{ flex-basis:83.33%; max-width: 83.33%;}
+.col-11{ flex-basis:91.66%; max-width: 91.66%;}
+.col-12{ flex-basis:100%; max-width: 100%;}
+.flex{display: flex;}
+.justify-space-between{ justify-content: space-between;}
+.align-center{ align-items: center;}
+
+
+/* layout */
+
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 10;}
+header.active{ background: #00f;}
+header a{ color: inherit; line-height: 80px; display: inline-block;}
+header h1{ font-size: 2rem;}
+header nav{ margin-left: -20px;}
+header nav li{ margin: 0 5px;}
+header nav li a{ font-size: 16px; padding: 0 15px; color: #aaa; display: block;}
+header nav li a.active{ color: #fff;}
+.btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: transparent; border-radius: 10px; font: 16px var(--ff); }
+.btn-mob{ display: none; position: absolute; right: 1rem; top: 30px; top: 22px;}
+.btn-mob span{ display: block; height: 2px; background: var(--red); margin: 6px;}
+
+
+.wrap-2{ background: #666; color: #fff; padding: 200px 0;}
+.wrap-2 p{ font-size: 4rem; font-weight: 100; }
+.wrap-2 a{ color: var(--red);}
+.wrap-2 button{ font-size: 10rem; border: none; background: none; color: inherit; margin-right: 40px;}
+
+
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem }
+.grid{ display: grid; grid-template-columns: repeat(2, 50%); gap: 4rem 2rem; overflow: hidden; }
+.grid .col{ }
+.circle{ width: 100px; border: 2px solid; color: #fff; border-radius: 50%; text-align: center; line-height: 96px; margin-right: 30px; font-size: 36px; }
+.feature h3{ font-size: 16px; line-height: 30px;}
+.feature p{ line-height: 22px; font-weight: 100;}
+.feature .flex div:first-child{ flex: 1 1 100px; }
+.feature .flex div:last-child{ flex: 1 1 auto; }
+
+
+
+.wrap-4{ background: #fff; color: var(--red); font-size: 36px; text-align: center; line-height: 10rem; }
+
+
+
+.wrap-5{ background: #ebebeb; color: #363636; padding: 100px 0;}
+.wrap-5 .btn{ margin: 0 10px 4rem 0;}
+.btn.active{ background: var(--red); color: #fff; border: none;}
+.work{ position: relative; margin-bottom: 2rem; overflow: hidden; }
+.work img{ max-width: 100%; height: auto; }
+.work h3{ font-size: 18px; color: var(--red); line-height: 40px; }
+.work p{ font-weight: 100; color: #898989; line-height: 20px;}
+.caption{ position: absolute; background: #fff; bottom: -100px; left: 0; right: 0; text-align: center; padding: 20px 0; transition: .3s;  }
+.work:hover .caption{ bottom: 0;}
+.seemore{ background: none; border: none; color: var(--red); font-size: 36px; }
+
+
+
+.wrap-6{ padding: 4rem 0 2rem; background: #666; color: #fff; }
+.reviews{ text-align: center; }
+/* .review{ display: none; }
+.review.active{ display: block; } */
+.review blockquote{ font-size: 36px; line-height: 41px; font-weight: 100;}
+.review img{ margin: 17px 0;}
+.review footer cite{ font-size: 16px; font-weight: bold; font-style: normal; }
+/* .pager{ display: flex; justify-content: center; }
+.pager li{ margin: 5px; }
+.pager li a{ display: block; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%; }
+.pager li a.active{ background: #fff;} */
+.wrap-6 .bx-wrapper{ background: transparent; border: none; box-shadow:  0 0 transparent; }
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:focus,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:hover{ background: #fff;}
+.wrap-6 .bx-wrapper img{ display: inline; }
+
+
+
+.wrap-7{ background: #fff; color: #363636; padding: 100px 0;}
+.gap{ margin: 50px 0 0 100px;}
+.team{ margin-top: 50px; position: relative; }
+.social{ position: absolute; right: 60px; top: 60px;}
+.social li{ margin-left: 10px;}
+.social a{ display: block; text-align: center; font-size: 24px; width: 50px; line-height: 50px; background: var(--red); color: #fff; border-radius: 50%; }
+.gap h3{ color: var(--red); font-size: 18px;}
+.gap small{ color:#898989; font-weight: 100; }
+.gap p{ color:#363636; font-weight: 100; margin-top: 1rem; }
+
+
+.wrap-8{ background: #666; color: #fff; text-align: center; padding: 90px 0;}
+.wrap-8 span.fa{ font-size: 72px;}
+.wrap-8 p{ font-size: 72px; font-weight: 100;}
+.wrap-8 b{ font-size: 18px;}
+
+
+
+.wrap-9{ background: #fff; color: #363636; padding: 100px 0;}
+canvas{ background: linear-gradient(lightblue, pink);}
+canvas{ max-width: 100%;}
+.accordion li{ margin-bottom: 10px;}
+.accordion a{ color: #898989; display: block; border: 1px solid #ebebeb; padding: 15px; border-radius: 10px;}
+.accordion a::after{ content: '+'; float: right; }
+.accordion li.active a::after{ content: '-';}
+.accordion a span.fa{ margin-right: 20px;}
+.accordion p{ display: none; line-height: 22px; padding: 20px; }
+.accordion li.active p{ display: block;}
+.accordion .active a{ color: var(--red); }
+
+
+
+.wrap-10{ background: var(--red); padding: 23px 0 22px; }
+.wrap-10 input{ width: 370px; font: 100 36px var(--ff); background: none; border: none; color: #fff;}
+.wrap-10 input::placeholder{ color: #fff;}
+.wrap-10 .btn{ background: #fff; }
+
+
+
+.wrap-11{ background: #7f7f7f; color: #fff; text-align: center; padding: 23px 0 0 0;}
+.box{ background: #a6a6a6; line-height: 95px; font-size: 24px; margin-bottom: 22px;}
+
+
+
+.wrap-12{ background: #ebebeb; color: #363636; padding: 100px 0;}
+address{ font-size: 16px; color: #898989;}
+.wrap-12 a{ color: inherit;}
+.social-sm{  margin: 10px 0;}
+.social-sm li{ margin-right: 10px; }
+.social-sm a{ color: var(--red);}
+.wrap-12 label{ font-weight: bold; display: block; border: 2px solid; color: #363636; padding: 16px; margin: 15px 0;}
+.wrap-12 input{background: none; border: none;} 
+.wrap-12 textarea{background: none; border: none; resize: none; vertical-align: top; height: 49px;} 
+.wrap-12 button{ margin: 15px 0; background: #fff; width: 100%; border: none; height: 85px; color: var(--red); border-radius: 10px; font-size: 16px; }
+.wrap-12 button span{ font-size: 36px; vertical-align: middle;}
+
+
+.wrap-13{ background: #252525; color: #ccc; text-align: center; padding: 50px 0;}
+.top{ display: none; position: fixed; left: 50%; bottom: 10px; transform: translateX(-50%); background: none; border: none; color: var(--red); font-size: 36px; }
+
+
+
+.overlay{ position: fixed; background: #0009; left: 0; right: 0; top: 0; bottom: 0; z-index: 10; }
+.popup{ position: fixed; z-index: 11; background: #fff; padding: 1rem; top: 100px; left: 50%; transform: translateX(-50%);}
+.popup form{}
+.popup form > div{ margin: 1rem 0;}
+
+
+
+
+
+
+@media screen and (max-width:1220px){
+    html{ font-size: 14px; }
+    h2{ font-size: 62px;}
+    .social{ right: 0;}
+    .box{ font-size: 20px;}
+}
+
+@media screen and (max-width:980px){
+    .col-t-1{ flex-basis:8.33%; max-width: 8.33%;}
+    .col-t-2{ flex-basis:16.66%; max-width: 16.66%;}
+    .col-t-3{ flex-basis:25%; max-width: 25%;}
+    .col-t-4{ flex-basis:33.33%; max-width: 33.33%;}
+    .col-t-5{ flex-basis:41.66%; max-width: 41.66%;}
+    .col-t-6{ flex-basis:50%; max-width: 50%;}
+    .col-t-7{ flex-basis:58.33%; max-width: 58.33%;}
+    .col-t-8{ flex-basis:66.66%; max-width: 66.66%;}
+    .col-t-9{ flex-basis:75%; max-width: 75%;}
+    .col-t-10{ flex-basis:83.33%; max-width: 83.33%;}
+    .col-t-11{ flex-basis:91.66%; max-width: 91.66%;}
+    .col-t-12{ flex-basis:100%; max-width: 100%;}
+    .col-t-hide{ display: none;}
+    .wrap-2 p{ font-size: 3rem;}
+    .gap{margin-left: 50px;}
+    .social{  top: 0;}
+    .social .flex{ flex-flow: column wrap; }
+    .social li{ margin-bottom: 10px;}
+    .col-t-auto{ flex: 1 0 20%; max-width: 20%;}
+}
+
+
+@media screen and (max-width:767px){
+    html{ font-size: 12px; }
+    .collapse{ display: none;}
+    .btn-mob{ display: inline-block;}
+    .wrap-5 .btn{ margin-right: 6px;}
+    .col-m-6{ flex-basis:50%; max-width: 50%;}
+    .col-m-12{ flex-basis:100%; max-width: 100%;}
+    .wrap-8 p, .wrap-8 span.fa{ font-size: 50px;}
+    .col-t-auto{ flex: 1 0 33.33%; max-width: 50%;}
+    .collapse .flex{ display: block; }
+    .collapse{ position: absolute;  left: 0; right: 0; top: 80px; background: #000; padding: 1rem; text-align: right;}
+    header nav a{ line-height: 40px;}
+}
+
+@media screen and (max-width:460px){
+    .col-p-4{ flex-basis:33.33%; max-width: 33.33%;}
+    .col-p-6{ flex-basis:50%; max-width: 50%;}
+    .col-p-12{ flex-basis:100%; max-width: 100%;}
+    .grid{ grid-template-columns: repeat(1, 1fr);}
+    .wrap-2 .flex{ flex-flow: column wrap; }
+    .wrap-5 img{ width: 100%;}
+    .wrap-10 input{ width: 230px; font-size: 24px;}
+    .col-t-auto{ flex: 1 0 50%; max-width: 100%;}
+
+}
